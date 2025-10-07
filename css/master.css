@@ -1015,320 +1015,324 @@
 
 
   /*Our process section*/
-  .work-process {
-      padding: 100px 0;
-      background: linear-gradient(135deg, #7a4dff, #b36cff);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-  }
+ .work-process {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-  .work-process::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background:
-          radial-gradient(circle at 20% 80%, rgba(101, 73, 213, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(227, 63, 161, 0.1) 0%, transparent 50%);
-      z-index: 1;
-  }
+.work-process::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(101, 73, 213, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(227, 63, 161, 0.12) 0%, transparent 60%);
+  z-index: 1;
+}
 
-  .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      position: relative;
-      z-index: 2;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
 
+/* ---------- Timeline Layout ---------- */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--purple) 25%, var(--blue) 75%, transparent 100%);
+  transform: translateY(-50%);
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(101, 73, 213, 0.4);
+}
+
+.timeline-step {
+  width: 22%;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+/* Connector Lines */
+.timeline-step::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--blue));
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.timeline-step:nth-child(odd)::before {
+  left: calc(100% - 25px);
+}
+
+.timeline-step:nth-child(even)::before {
+  right: calc(100% - 25px);
+}
+
+.timeline-step:last-child::before {
+  display: none;
+}
+
+/* ---------- Step Number ---------- */
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 15px rgba(101, 73, 213, 0.5);
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+/* ---------- Circle Icon ---------- */
+.circle-img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: var(--dark);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-img::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.circle-img i {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circle-img:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(101, 73, 213, 0.4);
+}
+
+.circle-img:hover::before {
+  opacity: 1;
+  animation: rotateGradient 3s linear infinite;
+}
+
+/* ---------- Step Text ---------- */
+.step-content {
+  margin-top: 15px;
+  padding: 0 10px;
+}
+
+.step-content h4 {
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.step-content h4::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  transition: width 0.3s ease;
+}
+
+.step-content h4:hover::after {
+  width: 100%;
+}
+
+.step-content p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.timeline-step:hover .step-content p {
+  color: #f4f4f4;
+}
+
+/* ---------- Animations ---------- */
+@keyframes floatOdd {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes floatEven {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+}
+
+.timeline-step:nth-child(odd) { animation: floatOdd 6s ease-in-out infinite; }
+.timeline-step:nth-child(even) { animation: floatEven 6s ease-in-out infinite; }
+
+@keyframes rotateGradient {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.timeline-step:hover .step-number {
+  box-shadow: 0 0 20px rgba(101, 73, 213, 0.8);
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 1200px) {
   .timeline {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      margin: 0 auto;
-      max-width: 1100px;
+    max-width: 950px;
   }
+}
 
-  /* Main Timeline Line */
-  .timeline::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg,
-              transparent 0%,
-              var(--purple) 20%,
-              var(--blue) 50%,
-              var(--pink) 80%,
-              transparent 100%);
-      transform: translateY(-50%);
-      z-index: 1;
-      box-shadow: 0 0 15px rgba(101, 73, 213, 0.5);
+@media (max-width: 992px) {
+  .timeline {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
   }
 
   .timeline-step {
-      width: 22%;
-      position: relative;
-      text-align: center;
-      z-index: 2;
-      transition: all 0.4s ease;
+    width: 45%;
   }
 
-  /* Step Connector Lines */
+  .timeline::before,
   .timeline-step::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 50px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--purple), var(--blue));
-      z-index: -1;
-      opacity: 0.7;
+    display: none;
   }
 
-  .timeline-step:nth-child(odd)::before {
-      left: calc(100% - 25px);
-  }
-
-  .timeline-step:nth-child(even)::before {
-      right: calc(100% - 25px);
-  }
-
-  .timeline-step:last-child::before {
-      display: none;
-  }
-
-  /* Step Number Badge */
   .step-number {
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--purple), var(--blue));
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.2rem;
-      box-shadow: 0 5px 15px rgba(101, 73, 213, 0.5);
-      z-index: 3;
-      transition: all 0.3s ease;
+    top: -15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-process {
+    padding: 80px 0;
   }
 
-  /* Step Circle with Gradient Border */
+  .timeline-step {
+    width: 80%;
+    margin: 0 auto 60px;
+  }
+
   .circle-img {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 25px;
-      border-radius: 50%;
-      overflow: hidden;
-      position: relative;
-      background: var(--dark);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 3px solid transparent;
-      background-clip: padding-box;
-  }
-
-  .circle-img::before {
-      content: '';
-      position: absolute;
-      top: -3px;
-      left: -3px;
-      right: -3px;
-      bottom: -3px;
-      background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
-      border-radius: 50%;
-      z-index: -1;
-      opacity: 0.8;
-      transition: all 0.4s ease;
+    width: 100px;
+    height: 100px;
   }
 
   .circle-img i {
-      font-size: 2.5rem;
-      background: linear-gradient(135deg, var(--pink), var(--purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-  }
-
-  .circle-img:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 15px 40px rgba(101, 73, 213, 0.4);
-  }
-
-  .circle-img:hover::before {
-      opacity: 1;
-      animation: rotateGradient 3s linear infinite;
-  }
-
-  .step-content {
-      margin-top: 15px;
-      padding: 0 10px;
+    font-size: 2rem;
   }
 
   .step-content h4 {
-      font-size: 1.4rem;
-      color: var(--white);
-      margin-bottom: 12px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      position: relative;
-      display: inline-block;
-  }
-
-  .step-content h4::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--pink), var(--blue));
-      transition: width 0.3s ease;
-  }
-
-  .step-content h4:hover::after {
-      width: 100%;
-  }
-
-  .step-content h4:hover {
-      background: black;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    font-size: 1.2rem;
   }
 
   .step-content p {
-      font-size: 0.95rem;
-      color: #aaa;
-      line-height: 1.6;
-      transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-step {
+    width: 100%;
   }
 
-  .timeline-step:hover .step-content p {
-      color: #ddd;
+  .circle-img {
+    width: 90px;
+    height: 90px;
   }
 
-  /* Floating Animation for Steps */
-  .timeline-step:nth-child(odd) {
-      animation: floatOdd 6s ease-in-out infinite;
+  .circle-img i {
+    font-size: 1.8rem;
   }
 
-  .timeline-step:nth-child(even) {
-      animation: floatEven 6s ease-in-out infinite;
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
   }
 
-  /* Responsive Design */
-  @media (max-width: 992px) {
-      .timeline {
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 60px;
-      }
-
-      .timeline-step {
-          width: 45%;
-      }
-
-      .timeline::before {
-          display: none;
-      }
-
-      .timeline-step::before {
-          display: none;
-      }
+  .step-content h4 {
+    font-size: 1.1rem;
   }
 
-  @media (max-width: 768px) {
-      .section-title {
-          font-size: 2.5rem;
-      }
+  .step-content p {
+    font-size: 0.85rem;
+    color: #ddd;
+  }
+}
 
-      .timeline-step {
-          width: 100%;
-          margin-bottom: 60px;
-      }
-
-      .circle-img {
-          width: 100px;
-          height: 100px;
-      }
-
-      .circle-img i {
-          font-size: 2rem;
-      }
-
-      .step-number {
-          width: 35px;
-          height: 35px;
-          font-size: 1rem;
-      }
+@media (max-width: 400px) {
+  .work-process {
+    padding: 60px 0;
   }
 
-  @media (max-width: 480px) {
-      .section-title {
-          font-size: 2rem;
-      }
-
-      .work-process {
-          padding: 60px 0;
-      }
+  .timeline-step {
+    margin-bottom: 50px;
   }
 
-  /* Animations */
-  @keyframes floatOdd {
-
-      0%,
-      100% {
-          transform: translateY(0);
-      }
-
-      50% {
-          transform: translateY(-15px);
-      }
+  .step-content h4 {
+    font-size: 1rem;
   }
 
-  @keyframes floatEven {
-
-      0%,
-      100% {
-          transform: translateY(0);
-      }
-
-      50% {
-          transform: translateY(15px);
-      }
+  .step-content p {
+    font-size: 0.8rem;
   }
-
-  @keyframes rotateGradient {
-      0% {
-          transform: rotate(0deg);
-      }
-
-      100% {
-          transform: rotate(360deg);
-      }
-  }
-
-  /* Glow effect on hover */
-  .timeline-step:hover .step-number {
-      box-shadow: 0 0 20px rgba(101, 73, 213, 0.8);
-      transform: translateX(-50%) scale(1.1);
-  }
+}
 
   /* 🌟 Expand Your Advertising Section */
   .expand-advertising {
@@ -5349,4 +5353,5 @@
             .offlinepage-testimonial {
                 padding: 30px 20px;
             }
+
         }
