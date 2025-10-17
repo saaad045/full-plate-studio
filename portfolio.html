@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | Full Plate Studio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
+    <meta name="description"
+        content="Full Plate Studio - Premium marketing agency specializing in digital strategy, design, and growth solutions">
+    <meta name="keywords" content="digital marketing, branding, social media, SEO, web design">
+    <meta property="og:title" content="Full Plate Studio | Premium Marketing Agency">
+    <meta property="og:description" content="Creative strategies and digital innovation for business growth">
+    <meta property="og:image" content="/img/og-image.jpg">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./img/logo-02.png" alt="Full Plate Studio Logo" style="height:80px; margin-right:10px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                    <!-- Call Now Button with Favicon -->
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+923001234567" class="btn btn-call">
+                            <img src="img/phone-call.png" alt="Call Icon" class="call-icon">
+                            Call Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero Section -->
+    <section class="portfoliosection-hero">
+        <div class="container">
+            <div class="portfoliosection-hero-content">
+                <h1 class="portfoliosection-title">Our Creative Portfolio</h1>
+                <p class="portfoliosection-subtitle">Explore our collection of successful projects that showcase our
+                    expertise in digital marketing, design, and brand development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--portfoilioo section-->
+    <section class="portfolio-container">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+
+        <div class="portfolio-header">
+            <p class="portfolio-tag">Our Creative Work</p>
+            <h2 class="portfolio-title">Explore Our Portfolio</h2>
+
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+                <button class="filter-btn" data-filter="print">Print Design</button>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="branding">
+                <img src="https://i.pinimg.com/736x/6a/71/9b/6a719b857b7628e5d1a2bd4be3856a52.jpg" alt="Creative 1" />
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">Branding</span>
+                    <h3 class="portfolio-item-title">Modern Logo Design</h3>
+                    <p class="portfolio-item-desc">Clean and minimal logo for a tech startup</p>
+                </div>
+                <div class="portfolio-actions">
+                    <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="web">
+                <img src="https://i.pinimg.com/736x/6a/71/9b/6a719b857b7628e5d1a2bd4be3856a52.jpg" alt="Creative 2" />
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">Web Design</span>
+                    <h3 class="portfolio-item-title">E-commerce Platform</h3>
+                    <p class="portfolio-item-desc">Responsive online store with modern UI</p>
+                </div>
+                <div class="portfolio-actions">
+                    <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="social">
+                <img src="https://i.pinimg.com/1200x/fe/2d/bf/fe2dbf96b194786cfeee0fa6151dcddf.jpg" alt="Creative 3" />
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">Social Media</span>
+                    <h3 class="portfolio-item-title">Instagram Campaign</h3>
+                    <p class="portfolio-item-desc">Vibrant visuals for a fashion brand</p>
+                </div>
+                <div class="portfolio-actions">
+                    <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="print">
+                <img src="https://i.pinimg.com/1200x/fe/2d/bf/fe2dbf96b194786cfeee0fa6151dcddf.jpg" alt="Creative 4" />
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">Print Design</span>
+                    <h3 class="portfolio-item-title">Product Catalog</h3>
+                    <p class="portfolio-item-desc">Elegant layout for a luxury brand</p>
+                </div>
+                <div class="portfolio-actions">
+                    <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="branding">
+                <img src="https://i.pinimg.com/736x/c6/6c/5f/c66c5fa9661e718beaaf76d446a39272.jpg" alt="Creative 5" />
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">Branding</span>
+                    <h3 class="portfolio-item-title">Corporate Identity</h3>
+                    <p class="portfolio-item-desc">Complete brand system for a financial firm</p>
+                </div>
+                <div class="portfolio-actions">
+                    <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="web">
+                <img src="https://i.pinimg.com/736x/c6/6c/5f/c66c5fa9661e718beaaf76d446a39272.jpg" alt="Creative 6" />
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">Web Design</span>
+                    <h3 class="portfolio-item-title">Portfolio Website</h3>
+                    <p class="portfolio-item-desc">Creative showcase for a photographer</p>
+                </div>
+                <div class="portfolio-actions">
+                    <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="social">
+                <img src="https://i.pinimg.com/736x/24/22/be/2422bea743ba1144181892dd6ef13af6.jpg" alt="Creative 7" />
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">Social Media</span>
+                    <h3 class="portfolio-item-title">Facebook Ad Campaign</h3>
+                    <p class="portfolio-item-desc">Engaging visuals for a restaurant chain</p>
+                </div>
+                <div class="portfolio-actions">
+                    <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="print">
+                <img src="https://i.pinimg.com/736x/24/22/be/2422bea743ba1144181892dd6ef13af6.jpg" alt="Creative 8" />
+                <div class="portfolio-overlay">
+                    <span class="portfolio-category">Print Design</span>
+                    <h3 class="portfolio-item-title">Event Brochure</h3>
+                    <p class="portfolio-item-desc">Eye-catching design for a music festival</p>
+                </div>
+                <div class="portfolio-actions">
+                    <a href="#" class="action-btn"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+
+        <div class="lightbox-nav">
+            <button class="nav-btn" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="nav-btn" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="lightbox-content">
+            <img src="" alt="Preview" id="lightbox-img" class="lightbox-img" />
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightbox-title">Project Title</h3>
+                <p class="lightbox-desc" id="lightbox-desc">Project description goes here</p>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Showcase Section -->
+    <section class="portfoliosection portfoliosection-showcase">
+        <div class="container">
+            <div class="portfoliosection-header">
+                <h2 class="portfolio-title">Case Studies</h2>
+                <p>Deep dive into some of our most successful projects and the strategies behind them</p>
+            </div>
+
+            <div class="portfoliosection-showcase-content">
+                <!-- Featured Project 1 -->
+                <div class="portfoliosection-featured">
+                    <div class="portfoliosection-featured-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                            alt="Tech Company Transformation">
+                    </div>
+                    <div class="portfoliosection-featured-content">
+                        <h3>Global Tech Company Digital Transformation</h3>
+                        <p>Comprehensive digital overhaul including website redesign, brand positioning, and
+                            multi-channel marketing strategy that resulted in significant market share growth.</p>
+
+                        <div class="portfoliosection-featured-stats">
+                            <div class="portfoliosection-featured-stat">
+                                <div class="portfoliosection-featured-stat-value">215%</div>
+                                <div class="portfoliosection-featured-stat-label">Revenue Growth</div>
+                            </div>
+                            <div class="portfoliosection-featured-stat">
+                                <div class="portfoliosection-featured-stat-value">3.2M</div>
+                                <div class="portfoliosection-featured-stat-label">New Users</div>
+                            </div>
+                            <div class="portfoliosection-featured-stat">
+                                <div class="portfoliosection-featured-stat-value">89%</div>
+                                <div class="portfoliosection-featured-stat-label">Customer Satisfaction</div>
+                            </div>
+                            <div class="portfoliosection-featured-stat">
+                                <div class="portfoliosection-featured-stat-value">12</div>
+                                <div class="portfoliosection-featured-stat-label">Awards Won</div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="portfoliosection-btn">
+                            View Case Study <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Featured Project 2 -->
+                <div class="portfoliosection-featured reverse">
+                    <div class="portfoliosection-featured-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                            alt="Startup Success Story">
+                    </div>
+                    <div class="portfoliosection-featured-content">
+                        <h3>Startup Launch & Growth Strategy</h3>
+                        <p>End-to-end digital strategy for a tech startup including brand development, website creation,
+                            and growth marketing that helped secure Series A funding.</p>
+
+                        <div class="portfoliosection-featured-stats">
+                            <div class="portfoliosection-featured-stat">
+                                <div class="portfoliosection-featured-stat-value">$5M</div>
+                                <div class="portfoliosection-featured-stat-label">Funding Raised</div>
+                            </div>
+                            <div class="portfoliosection-featured-stat">
+                                <div class="portfoliosection-featured-stat-value">50K+</div>
+                                <div class="portfoliosection-featured-stat-label">Active Users</div>
+                            </div>
+                            <div class="portfoliosection-featured-stat">
+                                <div class="portfoliosection-featured-stat-value">4.7★</div>
+                                <div class="portfoliosection-featured-stat-label">App Store Rating</div>
+                            </div>
+                            <div class="portfoliosection-featured-stat">
+                                <div class="portfoliosection-featured-stat-value">120%</div>
+                                <div class="portfoliosection-featured-stat-label">YoY Growth</div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="portfoliosection-btn">
+                            View Case Study <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+     <section class="why-choose-us">
+        <div class="choose-container">
+            <!-- LEFT SIDE -->
+            <div class="choose-left">
+                <span class="choose-badge">WHY CHOOSE US</span>
+                <h2 class="choose-title">Digital Growth Beyond Limits</h2>
+                <p class="choose-text">
+                    Your modern world digital marketing partner, fusing tech with creativity
+                    for limitless success. We help brands achieve measurable growth through
+                    impactful strategies.
+                </p>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="choose-right">
+                <div class="choose-layout">
+                    <!-- Top Image -->
+                    <div class="choose-image-top">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Team working together" />
+                    </div>
+
+                    <!-- Stat Cards -->
+                    <div class="choose-stat-card orange">
+                        <h3>80+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="choose-stat-card orange">
+                        <h3>40+</h3>
+                        <p>Happy Brands</p>
+                    </div>
+
+                    <!-- Bottom Portrait -->
+                    <div class="choose-image-bottom">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Team member" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <!-- Left Content -->
+            <div class="cta-left">
+                <span class="tag">Why Choose Us</span>
+                <h2>Unlock Revenue Growth for Your Business</h2>
+                <p>
+                    Partner with a results-driven digital marketing agency that combines innovative strategies,
+                    data-driven insights, and a personalized approach to propel your business forward.
+                </p>
+                <a href="contact.html" class="cta-button">
+                    Talk To Us! <span>➜</span>
+                </a>
+            </div>
+
+            <!-- Right Features -->
+            <div class="cta-right">
+                <div class="feature">
+                    <span class="dot"></span>
+                    <div>
+                        <h4>Tailored Strategies</h4>
+                        <p>Our team crafts customized marketing plans that align with your goals and target audience.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span class="dot"></span>
+                    <div>
+                        <h4>Multiple Channel Marketing</h4>
+                        <p>From SEO and social media marketing to paid advertising, we provide a full suite of services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span class="dot"></span>
+                    <div>
+                        <h4>Data-Driven Decision</h4>
+                        <p>We monitor campaign performance using advanced analytics and adjust strategies accordingly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span class="dot"></span>
+                    <div>
+                        <h4>Expert Team</h4>
+                        <p>We keep clients informed with clear reporting and regular updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners py-5">
+        <div class="container text-center">
+            <div class="section1-title mb-5">
+                <h2>Our Trusted Partners</h2>
+                <p>We collaborate with industry-leading brands that share our passion for innovation and growth.</p>
+            </div>
+
+            <div class="partners-slider">
+                <div class="slider-track">
+                    <div class="partner-logo"><img src="./img/partner1.png" alt="Partner 1"></div>
+                    <div class="partner-logo"><img src="./img/partner2.png" alt="Partner 2"></div>
+                    <div class="partner-logo"><img src="./img/partner3.png" alt="Partner 3"></div>
+                    <div class="partner-logo"><img src="./img/partner4.png" alt="Partner 4"></div>
+                    <div class="partner-logo"><img src="./img/partner5.png" alt="Partner 5"></div>
+                    <div class="partner-logo"><img src="./img/partner6.png" alt="Partner 6"></div>
+
+                    <!-- Duplicate logos for seamless infinite scroll -->
+                    <div class="partner-logo"><img src="./img/partner1.png" alt="Partner 1"></div>
+                    <div class="partner-logo"><img src="./img/partner2.png" alt="Partner 2"></div>
+                    <div class="partner-logo"><img src="./img/partner3.png" alt="Partner 3"></div>
+                    <div class="partner-logo"><img src="./img/partner4.png" alt="Partner 4"></div>
+                    <div class="partner-logo"><img src="./img/partner5.png" alt="Partner 5"></div>
+                    <div class="partner-logo"><img src="./img/partner6.png" alt="Partner 6"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-logo">
+                        <img src="./img/logo-02.png" alt="Full plate studio logo"
+                            style="height:100px; margin-bottom:10px;">
+                    </div>
+                    <p>We help businesses thrive in the digital landscape through innovative marketing strategies and
+                        cutting-edge technology.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="testimonials.html">Testimonials</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Services</h5>
+                        <ul>
+                            <li><a href="#">Design and Careative</a></li>
+                            <li><a href="#">Offline Marketing</a></li>
+                            <li><a href="#">Social Media Marketing</a></li>
+                            <li><a href="#">Paid Ads & Lead Gen</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Contact Info</h5>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt me-2"></i> 123, islamabad, pakistan</li>
+                            <li><i class="fas fa-phone me-2"></i> +92 920483 432</li>
+                            <li><i class="fas fa-envelope me-2"></i> info@fullplatestudio.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Full Plate Studio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/scrript.js"></script>
+
+</body>
+
+</html>
